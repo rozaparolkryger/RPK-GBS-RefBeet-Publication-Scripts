@@ -2,7 +2,10 @@
 
 Summary:
 
-Following scripts have been created within GBS pipeline used for improvement of sugar beet assembly.
+Following scripts have been created within GBS pipeline for genome assembly improvement.
+
+
+
 
 To create a one generous SNP table, contiaining SNP information coming from all individuals used in this study. This table was basis for genotype calling and following results were used for anchoring approach.
 VCF files were converted to text files of each individuum to create a SNP table using custom Perl create_ABH.pl script. 
