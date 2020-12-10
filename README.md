@@ -8,7 +8,7 @@ Following scripts have been created within GBS pipeline for genome assembly impr
 
 Create_ABH.pl
 
-Script for generation of SNP table, contiaining SNP information for all individuals with available VCF files. 
+Script for generation of SNP table, contiaining SNP information for all individuals with available VCF files. The assignment of genotypes: reference allele has been assign to 'A', non-reference allele to ‘B’ and both alleles to ‘H’. The positions with no SNP evidence were labeled as missing allele. 
 This table genarate basis file was basis file used for anchoring approach.
 
 INPUT: txt files converted from VCF files (for each individuum)
@@ -20,10 +20,8 @@ EXEC:
 
 ABH_cover_Pos.pl
 
-Script for assignment of genotypes, coverage verification and noise reduction.
+Script for coverage verification and noise reduction.
 This script needs pileup file containing a coverage information for each SNP position in the reference sequence as well as the primarily constructed ABH table. 
-
-Reference allele has been assign to 'A', non-reference allele to ‘B’ and both alleles to ‘H’. The positions with no SNP evidence were labeled as missing allele. 
 
 To avoid noise while calling the genotype along chromosomes of each individual, the created ABH table was scanned for the expected accuracy. The SNP positions with over 33% missing information or those showing vast deviation from expected segregation pattern (25%A:50%H:25%B), like for example position containing >42% of alternative allele were searched using bash commands. All those matched SNP positions were removed from the resulting ABH table file. 
 
