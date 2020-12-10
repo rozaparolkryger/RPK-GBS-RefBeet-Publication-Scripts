@@ -10,6 +10,7 @@ Script for generation of SNP table, contiaining SNP information for all individu
 This table genarate basis file was basis file used for anchoring approach.
 
 INPUT: txt files converted from VCF files (for each individuum)
+
 OUTPUT: ABH_table.txt 
 EXEC:
 
