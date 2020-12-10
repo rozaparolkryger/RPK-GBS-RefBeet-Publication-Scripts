@@ -5,13 +5,16 @@ Summary:
 Following scripts have been created within GBS pipeline for genome assembly improvement.
 
 
+
 Create_ABH.pl
+
 Script for generation of SNP table, contiaining SNP information for all individuals with available VCF files. 
 This table genarate basis file was basis file used for anchoring approach.
 
 INPUT: txt files converted from VCF files (for each individuum)
 
 OUTPUT: ABH_table.txt 
+
 EXEC:
 
 
@@ -26,7 +29,9 @@ To avoid noise while calling the genotype along chromosomes of each individual, 
 
 
 INPUT: pileup file and ABH_table.txt
+
 OUTPUT:
+
 EXEC:
 
 evaluate_ABH.py
@@ -34,8 +39,11 @@ evaluate_ABH.py
 The ABH table was evaluated using a sliding window approach to call genotypes along the scaffolds aligned to chromosomes for each individual. Genotypes were called based on the allele ratio in one window of certain length and shifted by an overlap. A homozygous genotype for the reference was identified, if the proportion was greater than 90%, a homozygous genotype for alternative allele (K1P2) was called, when the proportion of SNPs was over 80%. If the proportion of missing information was over 60%, no genotype was called and in all other cases a heterozygous genotype was automatically assigned. 
 
 INPUT: 
+
 OUTPUT:
+
 EXEC:
+
 
 pattern_search.py
 
